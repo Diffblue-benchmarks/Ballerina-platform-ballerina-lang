@@ -1982,7 +1982,7 @@
             <modules>
                 <module>compiler/ballerina-lang</module>
 
-                <module>stdlib/builtin</module>
+                <!-- <module>stdlib/builtin</module>
                 <module>stdlib/utils</module>
                 <module>stdlib/runtime-api</module>
                 <module>stdlib/test-common</module>
@@ -2022,24 +2022,24 @@
                 <module>stdlib/messaging/rabbitmq</module>
                 <module>stdlib/nats</module>
 
-                <module>misc/lib-creator</module>
+                <module>misc/lib-creator</module> -->
 
                 <module>bvm/ballerina-config</module>
                 <module>bvm/ballerina-core</module>
-                <module>bvm/ballerina-runtime</module>
+                <!-- <module>bvm/ballerina-runtime</module>
                 <module>bvm/ballerina-streaming</module>
                 <module>bvm/ballerina-logging</module>
                 <module>cli/ballerina-launcher</module>
-                <module>cli/ballerina-packerina</module>
+                <module>cli/ballerina-packerina</module> -->
                 <!--<module>compiler/ballerina-backend-llvm</module>-->
-                <module>compiler/ballerina-backend-jvm</module>
+                <!-- <module>compiler/ballerina-backend-jvm</module> -->
                 <!--<module>compiler/ballerina-backend-bvm</module>-->
 
                 <!--Should Run Before tests/ballerina-test-->
-                <module>misc/protobuf-ballerina</module>
+                <!-- <module>misc/protobuf-ballerina</module>
 
-                <module>tests/ballerina-unit-test</module>
-                <module>tests/ballerina-spec-conformance-tests</module>
+                <module>tests/ballerina-unit-test</module> -->
+                <!-- <module>tests/ballerina-spec-conformance-tests</module>
                 <module>tests/ballerina-compiler-plugin-test</module>
 
                 <module>cli/ballerina-cli-utils</module>
@@ -2063,13 +2063,13 @@
                 <module>tests/ballerina-test-utils</module>
                 <module>tests/ballerina-integration-test</module>
                 <module>tests/ballerina-tools-integration-test</module>
-                <module>tests/ballerina-examples-test</module>
+                <module>tests/ballerina-examples-test</module> -->
                 <!-- Intellij build disabled in default build -->
                 <!--<module>tool-plugins/intellij</module>-->
-                <module>tool-plugins/vscode</module>
+                <!-- <module>tool-plugins/vscode</module> -->
                 <!--<module>tool-plugins/theia</module> -->
 
-                <module>benchmarks</module>
+                <!-- <module>benchmarks</module> -->
             </modules>
             <properties>
                 <skipBenchmarks>true</skipBenchmarks>
@@ -2285,6 +2285,7 @@
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${maven.spotbugsplugin.version}</version>
                     <configuration>
+                        <skip>true</skip>
                         <effort>Max</effort>
                         <threshold>Low</threshold>
                         <xmlOutput>true</xmlOutput>
